@@ -1,0 +1,114 @@
+body {
+    background-image: url("../images/nature.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+h2 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-container {
+    height: 140px;
+    width: 170px;
+    perspective: 500px;
+}
+
+.card {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.face1 {
+    background-color: lawngreen;
+    transform: rotateY(180deg);
+}
+
+.face2 {
+    background-color: crimson;
+}
+
+.modalss {
+    position: fixed;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    height: 100vh;
+    width: 70%;
+    padding: 40px;
+    padding-top: 70px;
+}
+
+.crossings {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    height: 80px;
+    width: 80px;
+}
+
+.right > i,
+.wrong > i {
+    font-size: 40px;
+}
+
+.crossings > i {
+    font-size: 50px;
+}
+
+.crossings:hover {
+    color: beige;
+}
+
+.form-group {
+    width: 90%;
+    position: relative;
+}
+
+.right ,
+.wrong {
+    position: absolute;
+    top: 5px;
+    right: -40px;
+    text-align: center;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.right {
+    color: limegreen;
+}
+
+.wrong {
+    color: firebrick;
+}
